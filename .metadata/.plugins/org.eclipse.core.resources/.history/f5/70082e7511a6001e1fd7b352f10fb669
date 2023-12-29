@@ -1,0 +1,5 @@
+package com.edstem.service;
+
+public class ContactServiceImpl {
+
+}

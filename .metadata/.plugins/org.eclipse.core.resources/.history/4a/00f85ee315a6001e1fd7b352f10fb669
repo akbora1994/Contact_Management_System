@@ -1,0 +1,52 @@
+package com.edstem.exception;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.context.request.WebRequest;
+
+@ControllerAdvice
+public class GlobalExceptionHandler {
+
+	@ExceptionHandler(ContactNotFoundException.class)
+	public ResponseEntity<MyErrorDetails> contactNotFoundExceptionHandler(ContactNotFoundException e, WebRequest wb){
+		
+		MyErrorDetails err = new MyErrorDetails();
+		
+		err.setTime(LocalDateTime.now());
+		err.setMessage(e.getMessage());
+		err.setDetails(wb.getDescription(false));
+		
+		return new ResponseEntity<MyErrorDetails>(err, HttpStatus.BAD_REQUEST);
+	}
+	
+	@ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<MyErrorDetails> dataValidationExceptionHandler(MethodArgumentNotValidException e, WebRequest wb){
+		
+		MyErrorDetails err = new MyErrorDetails();
+		
+		err.setTime(LocalDateTime.now());
+		err.setMessage(e.getMessage());
+		err.setDetails(wb.getDescription(false));
+		
+		return new ResponseEntity<MyErrorDetails>(err, HttpStatus.BAD_REQUEST);
+	}
+	
+	@ExceptionHandler(Exception.class)
+    public ResponseEntity<MyErrorDetails> otherExceptionHandler(Exception e, WebRequest wb){
+		
+		MyErrorDetails err = new MyErrorDetails();
+		
+		err.setTime(LocalDateTime.now());
+		err.setMessage(e.getMessage());
+		err.setDetails(wb.getDescription(false));
+		
+		return new ResponseEntity<MyErrorDetails>(err, HttpStatus.BAD_REQUEST);
+	}
+	
+}

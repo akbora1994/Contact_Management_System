@@ -1,0 +1,5 @@
+package com.edstem.controller;
+
+public class ContactController {
+
+}

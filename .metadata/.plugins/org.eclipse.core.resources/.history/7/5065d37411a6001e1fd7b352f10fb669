@@ -1,0 +1,5 @@
+package com.edstem.model;
+
+public class Contact {
+
+}

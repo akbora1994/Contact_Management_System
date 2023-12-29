@@ -1,0 +1,5 @@
+package com.edstem.exception;
+
+public class MyErrorDetails {
+
+}
