@@ -3,10 +3,10 @@ Developed REST APIs for a simple project named as contact management system appl
 
 ## Technologies and Dependencies Used
 
---Maven used as a dependency management tool
--Spring Boot used to build REST APIs.
--Spring data JPA(Hibernate) to simplify Data Access logic and allows to write queries.
--MySQL used to handle data storage, retrieval & deleteing data.
--Lombok Reduces the time of Writing boiler plate code.
+- Maven used as a dependency management tool
+- Spring Boot used to build REST APIs.
+- Spring data JPA(Hibernate) to simplify Data Access logic and allows to write queries.
+- MySQL used to handle data storage, retrieval & deleteing data.
+- [Lombok] Reduces the time of Writing boiler plate code.
 
 
