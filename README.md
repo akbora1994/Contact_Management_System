@@ -1,5 +1,5 @@
 ## Contact-Management-System
-Developed REST APIs for a simple project named as contact management system application by which a user can create contact, view all contacts & delete a specific contact.
+Developed REST API services for contact management system by which a user can create contact, view all contacts & delete a specific contact.
 
 ## Technologies and Dependencies Used
 
