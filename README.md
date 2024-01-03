@@ -16,10 +16,10 @@ Developed REST API services for contact management system by which a user can cr
 
 ## Installation & Run
 
-```Before running the API server, you should update the database config inside the application.properties file.
+Before running the API server, you should update the database config inside the application.properties file.
 Update the port number, username and password as per your local database config.
 
-server.port=8038
+```server.port=8038
 
 #db specific properties
 spring.datasource.url=jdbc:mysql://localhost:3306/contactmsdb
@@ -31,7 +31,7 @@ spring.datasource.password=root
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 
-spring.mvc.pathmatch.matching-strategy = ANT_PATH_MATCHER
+spring.mvc.pathmatch.matching-strategy = ANT_PATH_MATCHER```
 
 ## API Root Endpoint
 
